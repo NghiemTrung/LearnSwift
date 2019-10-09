@@ -82,6 +82,12 @@ func KiemTraSoNguyenTo(n:Int,t:Int) -> String {
 }
 
 func Bai3(){
+    print("----------------Bai 3----------------")
+    print("Viết chương trình nhập vào số nguyên n. Kiem tra:")
+    print("- n là số nguyên dương hay không?")
+    print("- n có phải là số chẵn hay không?")
+    print("- n có chia hết cho 5 hay không?")
+    print("- n có phải là số nguyên tố hay không?")
     print("Nhap so can kiem tra: " )
     var n: Int = Int(readLine()!)!
     print(KiemTraNguyeDuong(n: n))
@@ -94,6 +100,8 @@ func Bai3(){
 //  Cho 2 số a và b, kiểm tra xem a có chia hết cho b không?
 
 func Bai4 () {
+    print ("----------------Bai 4----------------")
+    print ("Cho 2 số a và b, kiểm tra xem a có chia hết cho b không?")
     print("Nhap so a:")
     var a: Int = Int(readLine()!)!
     print("Nhap so b:")
@@ -118,4 +126,27 @@ func Bai5 () {
     } else {
         print("\(b) la gia tri lon nhat trong 2 so")
     }
+}
+
+//---------------Bai 6----------------
+//  giải phương trình bậc nhất
+
+func GiaiPhuongTrinhBacNhat(a:Double,b:Double,c:Double) -> String {
+    if (a==0) {
+        return "Phuong trinh \(a)x + \(b) = \(c) khong co nghiem"
+    } else {
+        return "Nghiem cua phuong trinh \(a)x + \(b) = \(c) la \((c-b)/a)"
+    }
+}
+
+func Bai6() {
+    print("---------------Bai 6----------------")
+    print("giải phương trình bậc nhất dang ax+b=c")
+    print("Nhap so a")
+    var a: Double = Double(readLine()!)!
+    print("Nhap so b")
+    var b: Double = Double(readLine()!)!
+    print("Nhap so c")
+    var c: Double = Double(readLine()!)!
+    print(GiaiPhuongTrinhBacNhat(a: a, b: b, c: c))
 }
