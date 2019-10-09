@@ -82,10 +82,27 @@ func KiemTraSoNguyenTo(n:Int,t:Int) -> String {
 }
 
 func Bai3(){
-    print("Nhap so can kiem tra: ")
+    print("Nhap so can kiem tra: " )
     var n: Int = Int(readLine()!)!
     print(KiemTraNguyeDuong(n: n))
     print(KiemTraChanLe(n: n))
     print(KiemTraChiaHetCho5(n: n))
     print(KiemTraSoNguyenTo(n: n, t: 2))
 }
+
+//----------------Bai 4----------------
+//  Cho 2 số a và b, kiểm tra xem a có chia hết cho b không?
+
+func Bai4 () {
+    print("Nhap so a:")
+    var a: Int = Int(readLine()!)!
+    print("Nhap so b:")
+    var b: Int = Int(readLine()!)!
+    if (a%b==0) {
+        print("a chia het cho b")
+    } else {
+        print("a khong chia het duoc cho b")
+    }
+}
+
+
