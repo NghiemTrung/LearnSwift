@@ -12,5 +12,3 @@ import Foundation
 
 //  Chọn bài tập từ các lựa chọn
 
-
-
