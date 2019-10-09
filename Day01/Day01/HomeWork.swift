@@ -37,7 +37,55 @@ func Bai2() {
     var a = Double(readLine()!)!
     print("nhap so thu hai:")
     var b = Double(readLine()!)!
-    print("Tong binh phuon 2 so vuwa nhap la \(TongBinhPhuong2So(a: a, b: b))")
+    print("Tong binh phuon 2 so vua nhap la \(TongBinhPhuong2So(a: a, b: b))")
 }
 
 //----------------Bai 3----------------
+//  Viết chương trình nhập vào số nguyên n. Kiem tra:
+//  - n là số nguyên dương hay không?
+//  - n có phải là số chẵn hay không?
+//  - n có chia hết cho 5 hay không?
+//  - n có phải là số nguyên tố hay không?
+
+func KiemTraNguyeDuong(n: Int) -> String {
+    if (n>0) {
+        return "\(n) la so nguyen duong"
+    } else {
+        return "\(n) khong phai so nguyen duong"
+    }
+}
+
+func KiemTraChanLe(n:Int)->String{
+    if (n%2==0) {
+        return "\(n) la so chan"
+    } else {
+        return "\(n) la so le"
+    }
+}
+
+func KiemTraChiaHetCho5(n:Int) -> String {
+    if (n%5==0) {
+        return "\(n) chia het cho 5"
+    } else {
+        return " \(n) khong chia het cho 5"
+    }
+}
+
+func KiemTraSoNguyenTo(n:Int,t:Int) -> String {
+    if ((t*t)>n) {
+        return "\(n) la so nguyen to"
+    } else if (n%t==0) {
+        return "\(n) khong phai so nguyen to"
+    } else {
+        return KiemTraSoNguyenTo(n: n, t: t+1)
+    }
+}
+
+func Bai3(){
+    print("Nhap so can kiem tra: ")
+    var n: Int = Int(readLine()!)!
+    print(KiemTraNguyeDuong(n: n))
+    print(KiemTraChanLe(n: n))
+    print(KiemTraChiaHetCho5(n: n))
+    print(KiemTraSoNguyenTo(n: n, t: 2))
+}
