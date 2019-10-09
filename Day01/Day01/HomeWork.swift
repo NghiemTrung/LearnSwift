@@ -13,17 +13,17 @@ import Foundation
 //  Hướng dẫn: S = 4πR 2 và V = (4/3)πR 3
 func Bai1 () {
     print("Nhap ban kinh hinh cau: ")
-    var radius: Double = Double(readLine()!)!
+    let radius: Double = Double(readLine()!)!
     print("Dien tich hinh cau la: \(DienTichHinhCau(radius: radius)) don vi dien tich")
     print("The tich hinh cau la: \(TheTichHinhCau(radius: radius)) don vi the tich")
 }
 
 func DienTichHinhCau(radius : Double) -> Double {
-    return 4*3.1415*radius
+    return 4*3.1415*radius*radius
 }
 
 func TheTichHinhCau(radius : Double) -> Double {
-    return (4/3)*3.1415*radius
+    return (1.3333)*3.1415*radius*radius*radius
 }
 
 //--------------Bai 2--------------
@@ -34,9 +34,9 @@ func TongBinhPhuong2So(a: Double, b: Double) -> Double {
 
 func Bai2() {
     print("Nhap so thu nhat: ")
-    var a = Double(readLine()!)!
+    let a = Double(readLine()!)!
     print("nhap so thu hai:")
-    var b = Double(readLine()!)!
+    let b = Double(readLine()!)!
     print("Tong binh phuon 2 so vua nhap la \(TongBinhPhuong2So(a: a, b: b))")
 }
 
@@ -67,7 +67,7 @@ func KiemTraChiaHetCho5(n:Int) -> String {
     if (n%5==0) {
         return "\(n) chia het cho 5"
     } else {
-        return " \(n) khong chia het cho 5"
+        return "\(n) khong chia het cho 5"
     }
 }
 
@@ -89,7 +89,7 @@ func Bai3(){
     print("- n có chia hết cho 5 hay không?")
     print("- n có phải là số nguyên tố hay không?")
     print("Nhap so can kiem tra: " )
-    var n: Int = Int(readLine()!)!
+    let n: Int = Int(readLine()!)!
     print(KiemTraNguyeDuong(n: n))
     print(KiemTraChanLe(n: n))
     print(KiemTraChiaHetCho5(n: n))
@@ -103,9 +103,9 @@ func Bai4 () {
     print ("----------------Bai 4----------------")
     print ("Cho 2 số a và b, kiểm tra xem a có chia hết cho b không?")
     print("Nhap so a:")
-    var a: Int = Int(readLine()!)!
+    let a: Int = Int(readLine()!)!
     print("Nhap so b:")
-    var b: Int = Int(readLine()!)!
+    let b: Int = Int(readLine()!)!
     if (a%b==0) {
         print("\(a) chia het cho \(b)")
     } else {
@@ -118,9 +118,9 @@ func Bai4 () {
 
 func Bai5 () {
     print("Nhap so a:")
-    var a: Double = Double(readLine()!)!
+    let a: Double = Double(readLine()!)!
     print("Nhap so b:")
-    var b: Double = Double(readLine()!)!
+    let b: Double = Double(readLine()!)!
     if (a>b) {
         print("\(a) la gia tri lon nhat trong 2 so")
     } else {
@@ -143,10 +143,10 @@ func Bai6() {
     print("---------------Bai 6----------------")
     print("giải phương trình bậc nhất dang ax+b=c")
     print("Nhap so a")
-    var a: Double = Double(readLine()!)!
+    let a: Double = Double(readLine()!)!
     print("Nhap so b")
-    var b: Double = Double(readLine()!)!
+    let b: Double = Double(readLine()!)!
     print("Nhap so c")
-    var c: Double = Double(readLine()!)!
+    let c: Double = Double(readLine()!)!
     print(GiaiPhuongTrinhBacNhat(a: a, b: b, c: c))
 }
