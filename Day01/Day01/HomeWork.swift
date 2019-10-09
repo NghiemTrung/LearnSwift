@@ -99,10 +99,23 @@ func Bai4 () {
     print("Nhap so b:")
     var b: Int = Int(readLine()!)!
     if (a%b==0) {
-        print("a chia het cho b")
+        print("\(a) chia het cho \(b)")
     } else {
-        print("a khong chia het duoc cho b")
+        print("\(a) khong chia het duoc cho \(b)")
     }
 }
 
+//----------------Bai 5----------------
+//  Tìm giá trị lớn nhất của 2 số
 
+func Bai5 () {
+    print("Nhap so a:")
+    var a: Double = Double(readLine()!)!
+    print("Nhap so b:")
+    var b: Double = Double(readLine()!)!
+    if (a>b) {
+        print("\(a) la gia tri lon nhat trong 2 so")
+    } else {
+        print("\(b) la gia tri lon nhat trong 2 so")
+    }
+}
