@@ -23,7 +23,7 @@ func DienTichHinhCau(radius : Double) -> Double {
 }
 
 func TheTichHinhCau(radius : Double) -> Double {
-    return (1.3333)*3.1415*radius*radius*radius
+    return (4/3)*3.1415*radius*radius*radius
 }
 
 //--------------Bai 2--------------
@@ -33,6 +33,8 @@ func TongBinhPhuong2So(a: Double, b: Double) -> Double {
 }
 
 func Bai2() {
+    print("--------------Bai 2--------------")
+    print("Tính tổng bình phương 2 số a, b (a, b nhập từ bàn phím)")
     print("Nhap so thu nhat: ")
     let a = Double(readLine()!)!
     print("nhap so thu hai:")
@@ -117,6 +119,8 @@ func Bai4 () {
 //  Tìm giá trị lớn nhất của 2 số
 
 func Bai5 () {
+    print("----------------Bai 5----------------")
+    print("Tìm giá trị lớn nhất của 2 số")
     print("Nhap so a:")
     let a: Double = Double(readLine()!)!
     print("Nhap so b:")

@@ -41,7 +41,7 @@ func ChonBaiTap () {
         Bai6()
         TiepTucChonBaiTap()
     } else {
-        print("Xin nhap cac so tuw 1 den 6")
+        print("Xin nhap cac so tu 1 den 6")
         ChonBaiTap()
     }
 }
