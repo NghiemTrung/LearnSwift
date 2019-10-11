@@ -135,22 +135,22 @@ func Bai5 () {
 //---------------Bai 6----------------
 //  giải phương trình bậc nhất
 
-func GiaiPhuongTrinhBacNhat(a:Double,b:Double,c:Double) -> String {
-    if (a==0) {
-        return "Phuong trinh \(a)x + \(b) = \(c) khong co nghiem"
+func GiaiPhuongTrinhBacNhat(a:Double,b:Double) -> String {
+    if (a==0 && b==0) {
+        return "Phuong trinh \(a)x + \(b) = 0 co vo so nghiem"
+    } else if(a==0){
+        return "Phuong trinh \(a)x + \(b) = 0 khong co nghiem"
     } else {
-        return "Nghiem cua phuong trinh \(a)x + \(b) = \(c) la \((c-b)/a)"
+        return "Nghiem cua phuong trinh \(a)x + \(b) = 0 la \(-b)/a)"
     }
 }
 
 func Bai6() {
     print("---------------Bai 6----------------")
-    print("giải phương trình bậc nhất dang ax+b=c")
+    print("giải phương trình bậc nhất dang ax + b=0")
     print("Nhap so a")
     let a: Double = Double(readLine()!)!
     print("Nhap so b")
     let b: Double = Double(readLine()!)!
-    print("Nhap so c")
-    let c: Double = Double(readLine()!)!
-    print(GiaiPhuongTrinhBacNhat(a: a, b: b, c: c))
+    print(GiaiPhuongTrinhBacNhat(a: a, b: b))
 }
