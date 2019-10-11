@@ -53,4 +53,5 @@ import Foundation
 //
 //checkSwitch()
 //Xeploai()
-InSoTrongKhoang()
+//InSoTrongKhoang()
+
