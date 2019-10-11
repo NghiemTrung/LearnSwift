@@ -74,7 +74,9 @@ func KiemTraChiaHetCho5(n:Int) -> String {
 }
 
 func KiemTraSoNguyenTo(n:Int,t:Int) -> String {
-    if ((t*t)>n) {
+    if n<2 {
+        return "\(n) khong phai la so nguyen to"
+    } else if ((t*t)>n) {
         return "\(n) la so nguyen to"
     } else if (n%t==0) {
         return "\(n) khong phai so nguyen to"
