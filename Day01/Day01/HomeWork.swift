@@ -19,11 +19,11 @@ func Bai1 () {
 }
 
 func DienTichHinhCau(radius : Double) -> Double {
-    return 4*3.1415*radius*radius
+    return 4*3.1415*pow(radius, 2)
 }
 
 func TheTichHinhCau(radius : Double) -> Double {
-    return (4/3)*3.1415*radius*radius*radius
+    return (4/3)*3.1415*pow(radius, 3)
 }
 
 //--------------Bai 2--------------
