@@ -28,7 +28,7 @@ func InputIntFromKeyboradWithinRange(Begin: Int, End: Int) -> Int {
     return _input
 }
 
-//----------------Bai 1----------------
+//----------------Bai 5----------------
 //5, Viết chương trình nhập vào 3 số nguyên a, b, c. Tìm, in ra số lớn nhất, số bé nhất.
 
 func TimMaxMin(a: Int,b:Int,c:Int) {
@@ -59,7 +59,7 @@ func TimMaxMin(a: Int,b:Int,c:Int) {
 
 func Bai05() {
     print("""
-        ----------------Bai 1----------------
+        ----------------Bai 5----------------
         5, Viết chương trình nhập vào 3 số nguyên a, b, c. Tìm, in ra số lớn nhất, số bé nhất.
         """)
     print("Nhập số thứ nhât:")
@@ -188,5 +188,27 @@ func Bai08() {
     
 }
 
+//---------------Bai 9----------------
 //9, Tìm số n bé nhất sao cho n! lớn hơn một số m cho trước (m nhập từ bàn phím).
+
+func TimSo_n(m: Int) -> Int {
+    var GiaiThua = 1
+    var n = 2
+    
+    repeat{
+        GiaiThua = GiaiThua*n
+        n += 1
+    } while GiaiThua<=m
+    return n-1
+}
+
+func Bai09() {
+    print("""
+---------------Bai 9----------------
+    9, Tìm số n bé nhất sao cho n! lớn hơn một số m cho trước (m nhập từ bàn phím).
+""")
+    print("Nhập số m: ")
+    let m = InputFromKeyboardInt()
+    print("\(TimSo_n(m: m)) là số nhỏ nhất có giai thừa lớn hơn m")
+}
 
