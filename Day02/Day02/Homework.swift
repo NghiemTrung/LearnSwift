@@ -18,6 +18,15 @@ func InputFromKeyboardInt() -> Int {
     }
     return _output
 }
+// function nhập số nguyên trong một khoảng
+func InputIntFromKeyboradWithinRange(Begin: Int, End: Int) -> Int {
+    let _input = InputFromKeyboardInt()
+    while _input<Begin || _input>End {
+        print("Số nhập vào phải nằm trong khoảng từ \(Begin) đến \(End)")
+        return InputIntFromKeyboradWithinRange(Begin: Begin, End: End)
+    }
+    return _input
+}
 
 //----------------Bai 1----------------
 //5, Viết chương trình nhập vào 3 số nguyên a, b, c. Tìm, in ra số lớn nhất, số bé nhất.
@@ -110,8 +119,12 @@ func Bai06() {
 //----------------Bai 7----------------
 //7, Nhập một năm công lịch bất kỳ , kiểm tra xem năm đó có phải năm nhuận hay không
 func KiemTraNamNhuan(Nam: Int){
-    if Nam%400==0 {
+    if (Nam % 100==0) {
+        if Nam%400==0 {
         print("Năm \(Nam) là năm nhuận")
+        } else {
+            print("Năm \(Nam) không phải là năm nhuận")
+        }
     } else if(Nam%4==0) {
         print("Năm \(Nam) là năm nhuận")
     } else {
@@ -129,8 +142,51 @@ func Bai07() {
     KiemTraNamNhuan(Nam: Nam)
     
 }
+
+//----------------Bai 8----------------
 //8, Nhập vào thời điểm T gồm 3 số theo dạng : “Giờ : Phút : Giây” và 1 số nguyên X <= 10000
 //- Hỏi sau X giây kể từ thời điểm T thì thời gian là bao nhiêu ?
 //- Hãy in ra theo dạng “Giờ : Phút : Giây”
-//
+
+func Bai08() {
+    print("""
+        ----------------Bai 8----------------
+        8, Nhập vào thời điểm T gồm 3 số theo dạng : “Giờ : Phút : Giây” và 1 số nguyên X <= 10000
+        - Hỏi sau X giây kể từ thời điểm T thì thời gian là bao nhiêu ?
+        - Hãy in ra theo dạng “Giờ : Phút : Giây”
+        """)
+    //nhập liệu
+    print("Nhập giờ:")
+    var _Gio = InputIntFromKeyboradWithinRange(Begin: 0, End: 23)
+    print("Nhập phút: ")
+    var _Phut = InputIntFromKeyboradWithinRange(Begin: 0, End: 59)
+    print("Nhập giây:")
+    var _Giay = InputIntFromKeyboradWithinRange(Begin: 0, End: 59)
+    print("Nhập số X")
+    var X = InputIntFromKeyboradWithinRange(Begin: 0, End: 10000)
+    
+    var ChuyenDoiRaGiay = _Gio*60*60 + _Phut*60 + _Giay
+    ChuyenDoiRaGiay += X
+    
+    let _InRa = "\(X) giây từ thời điểm \(_Gio):\(_Phut):\(_Giay) là: "
+    
+    //Chuyển lại về giờ
+    X = ChuyenDoiRaGiay/(60*60*24)
+    ChuyenDoiRaGiay -= X*60*60*24
+    _Gio = ChuyenDoiRaGiay/(60*60)
+    ChuyenDoiRaGiay -= _Gio*60*60
+    _Phut = ChuyenDoiRaGiay/60
+    ChuyenDoiRaGiay -= _Phut*60
+    _Giay = ChuyenDoiRaGiay
+    
+    //in ra kết quả
+    if X>0 {
+        print(_InRa + "\(_Gio):\(_Phut):\(_Giay) ngày hôm sau")
+    } else {
+        print(_InRa + "\(_Gio):\(_Phut):\(_Giay)")
+    }
+    
+}
+
 //9, Tìm số n bé nhất sao cho n! lớn hơn một số m cho trước (m nhập từ bàn phím).
+
