@@ -8,6 +8,17 @@
 
 import Foundation
 
+// Function nhập số nguyên từ bàn phím
+func InputFromKeyboardInt() -> Int {
+    var _input: Int?
+    _input = Int(readLine()!)
+    guard let _output = _input else {
+        print("Nhập số nguyên please!!!!")
+        return InputFromKeyboardInt()
+    }
+    return _output
+}
+
 //----------------Bai 1----------------
 //5, Viết chương trình nhập vào 3 số nguyên a, b, c. Tìm, in ra số lớn nhất, số bé nhất.
 
@@ -38,12 +49,16 @@ func TimMaxMin(a: Int,b:Int,c:Int) {
 }
 
 func Bai05() {
+    print("""
+        ----------------Bai 1----------------
+        5, Viết chương trình nhập vào 3 số nguyên a, b, c. Tìm, in ra số lớn nhất, số bé nhất.
+        """)
     print("Nhập số thứ nhât:")
-    let a = Int(readLine()!)!
+    let a = InputFromKeyboardInt()
     print("Nhập số thứ hai:")
-    let b = Int(readLine()!)!
+    let b = InputFromKeyboardInt()
     print("Nhập số thứ ba:")
-    let c = Int(readLine()!)!
+    let c = InputFromKeyboardInt()
     //chạy hàm tìm Max Min
     TimMaxMin(a: a, b: b, c: c)
 }
@@ -83,18 +98,37 @@ func Bai06() {
         """)
     //Nhập liệu
     print("Nhập độ dài cạnh a: ")
-    let a = Int(readLine()!)!
+    let a = InputFromKeyboardInt()
     print("Nhập độ dài cạnh b: ")
-    let b = Int(readLine()!)!
+    let b = InputFromKeyboardInt()
     print("Nhập độ dài cạnh c: ")
-    let c = Int(readLine()!)!
+    let c = InputFromKeyboardInt()
     //gọi hàm
     KiemTraVaDienTichTamGiac(a: a, b: b, c: c)
 }
 
-
+//----------------Bai 7----------------
 //7, Nhập một năm công lịch bất kỳ , kiểm tra xem năm đó có phải năm nhuận hay không
-//
+func KiemTraNamNhuan(Nam: Int){
+    if Nam%400==0 {
+        print("Năm \(Nam) là năm nhuận")
+    } else if(Nam%4==0) {
+        print("Năm \(Nam) là năm nhuận")
+    } else {
+        print("Năm \(Nam) không phải là năm nhuận")
+    }
+}
+
+func Bai07() {
+    print("""
+        ----------------Bai 7----------------
+        7, Nhập một năm công lịch bất kỳ , kiểm tra xem năm đó có phải năm nhuận hay không
+        """)
+    print("Nhập năm cần kiểm tra")
+    let Nam = InputFromKeyboardInt()
+    KiemTraNamNhuan(Nam: Nam)
+    
+}
 //8, Nhập vào thời điểm T gồm 3 số theo dạng : “Giờ : Phút : Giây” và 1 số nguyên X <= 10000
 //- Hỏi sau X giây kể từ thời điểm T thì thời gian là bao nhiêu ?
 //- Hãy in ra theo dạng “Giờ : Phút : Giây”
