@@ -194,7 +194,6 @@ func Bai08() {
 func TimSo_n(m: Int) -> Int {
     var GiaiThua = 1
     var n = 2
-    
     repeat{
         GiaiThua = GiaiThua*n
         n += 1
