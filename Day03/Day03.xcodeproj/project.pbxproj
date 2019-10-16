@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		87181E942351F532002CC09E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87181E932351F532002CC09E /* main.swift */; };
+		87181E9B2351F695002CC09E /* Mang?.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87181E9A2351F695002CC09E /* Mang?.swift */; };
+		87181E9D23520564002CC09E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87181E9C23520564002CC09E /* Dictionary.swift */; };
+		878111A323577D730056502E /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878111A223577D730056502E /* Homework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		87181E902351F532002CC09E /* Day03 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Day03; sourceTree = BUILT_PRODUCTS_DIR; };
 		87181E932351F532002CC09E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		87181E9A2351F695002CC09E /* Mang?.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mang?.swift"; sourceTree = "<group>"; };
+		87181E9C23520564002CC09E /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		878111A223577D730056502E /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				87181E932351F532002CC09E /* main.swift */,
+				87181E9A2351F695002CC09E /* Mang?.swift */,
+				87181E9C23520564002CC09E /* Dictionary.swift */,
+				878111A223577D730056502E /* Homework.swift */,
 			);
 			path = Day03;
 			sourceTree = "<group>";
@@ -120,7 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87181E9B2351F695002CC09E /* Mang?.swift in Sources */,
+				878111A323577D730056502E /* Homework.swift in Sources */,
 				87181E942351F532002CC09E /* main.swift in Sources */,
+				87181E9D23520564002CC09E /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,3 +10,7 @@ import Foundation
 
 print("Hello, World!")
 
+//bai1TrenLop()
+//bai2TrenLop()
+//ViDuTrenLop()
+bai3TrenLop()
