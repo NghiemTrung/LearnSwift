@@ -43,3 +43,22 @@ func bai4VeNha() {
 func reverseString (_input: String) -> String{
     return ""
 }
+
+//6, Đưa ra: phần tử lớn nhất, phần tử bé nhất, trun của một dãy số cho trước
+func trungBinhCong(nummberArray: [Int]) -> Int {
+    var trungBinhCong
+    for i in numberArray {
+        trungBinhCong = trungBinhCong + i
+    }
+    return trungBinhCong / numberArray.count
+}
+
+func bai6veNha() {
+    print("dãy số là [15,2,8,66,5,-55,88,-69,568,426,95,-658,-55,5,-9,-81]")
+    var numberArray: [Int] = []
+    numberArray = [15,2,8,66,5,-55,88,-69,568,426,95,-658,-55,5,-9,-81]
+    let ketQua = timMaxMin(numberArray: numberArray)
+    print("Giá trị lớn nhất là: \(ketQua["Max"]!)")
+    print("Giá trị nhỏ nhất là: \(ketQua["Min"]!)")
+    print("Trung bình cộng của cả dãy số là : \(trungBinhCong(numberArray))")
+}
