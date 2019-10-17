@@ -151,3 +151,5 @@ func bai4TrenLop() {
     numberArray = [15,2,8,66,5,-55,88,-69,568,426,95,-658,-55,5,-9,-81]
     print("So lớn thứ nhì trong dãy là: \(tim2ndMax(numberArray: numberArray))")
 }
+
+

@@ -172,12 +172,11 @@ func Bai08() {
     
     //Chuyển lại về giờ
     X = ChuyenDoiRaGiay/(60*60*24)
-    ChuyenDoiRaGiay -= X*60*60*24
+    ChuyenDoiRaGiay = ChuyenDoiRaGiay%(60*60*24)
     _Gio = ChuyenDoiRaGiay/(60*60)
-    ChuyenDoiRaGiay -= _Gio*60*60
+    ChuyenDoiRaGiay = ChuyenDoiRaGiay%(60*60)
     _Phut = ChuyenDoiRaGiay/60
-    ChuyenDoiRaGiay -= _Phut*60
-    _Giay = ChuyenDoiRaGiay
+    _Giay = ChuyenDoiRaGiay%60
     
     //in ra kết quả
     if X>0 {
