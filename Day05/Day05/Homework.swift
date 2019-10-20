@@ -42,7 +42,7 @@ func veHinhChuNhatDac(Cao: Int, Rong: Int) {
     var veDong: String = ""
     for i in 1...Cao {
         for j in 1...Rong{
-            veDong = veDong + "*"
+            veDong = veDong + " *"
         }
         print(veDong)
         veDong = ""
@@ -64,10 +64,10 @@ func veHinhChuNhatRong(Cao: Int, Rong: Int) {
     var veDong: String = ""
     for i in 1...Cao {
         for j in 1...Rong{
-            if (i==0||j==0||i==Cao||j==Rong) {
-                veDong = veDong + "*"
+            if (i==1||j==1||i==Cao||j==Rong) {
+                veDong = veDong + " *"
             } else {
-                veDong = veDong + " "
+                veDong = veDong + "  "
             }
         }
         print(veDong)
@@ -89,8 +89,8 @@ func Bai02veNha() {
 func veHinhTamGiacVuong(Cao: Int) {
     var veDong = ""
     for i in 1...Cao {
-        for j in 0...i{
-            veDong = veDong + "*"
+        for j in 0..<i{
+            veDong = veDong + " *"
         }
         print(veDong)
         veDong = ""
@@ -111,9 +111,9 @@ func veHinhTamGiacCanNguoc(Cao: Int) {
     for i in 1...(Cao) {
         for j in 1...(2*Cao-i){
             if (i<=j) {
-                veDong = veDong + "*"
+                veDong = veDong + " *"
             } else {
-                veDong = veDong + " "
+                veDong = veDong + "  "
             }
         }
         print(veDong)
@@ -125,7 +125,7 @@ func Bai04veNha() {
     print("4, Vẽ tam giác cân ngược:")    
     print("Nhap chieu cao: ")
     let chieuCao = InputIntFromKeyboradNotLessThan(Min: 2)
-    veHinhTamGiacVuong(Cao: chieuCao)
+    veHinhTamGiacCanNguoc(Cao: chieuCao)
 }
 
 
@@ -167,3 +167,4 @@ func Bai05veNha() {
     }
     print("\(dapAn)")
 }
+
