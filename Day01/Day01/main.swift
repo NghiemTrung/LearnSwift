@@ -18,7 +18,6 @@ func ChonBaiTap () {
     print("3. Bai tap 3")
     print("4. Bai tap 4")
     print("5. Bai tap 5")
-    print("6. Bai tap 6")
     print("lua chon cua ban la: ", terminator: "")
     let LuaChon: Int = Int(readLine()!)!
 
