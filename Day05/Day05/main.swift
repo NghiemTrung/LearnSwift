@@ -37,7 +37,7 @@ func ChonBaiTap () {
         Bai05veNha()
         TiepTucChonBaiTap()
     } else {
-        print("Xin nhap cac so tu 1 den 6")
+        print("Xin nhap cac so tu 1 den 5")
         ChonBaiTap()
     }
 }
@@ -54,4 +54,9 @@ func TiepTucChonBaiTap() {
     }
 }
 
-ChonBaiTap()
+//ChonBaiTap()
+
+for i in 1...1024{
+    print("\(demSoPhepTinh(soNhapVao: i))")
+}
+
