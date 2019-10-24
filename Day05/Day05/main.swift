@@ -54,9 +54,5 @@ func TiepTucChonBaiTap() {
     }
 }
 
-//ChonBaiTap()
-
-for i in 1...1024{
-    print("\(demSoPhepTinh(soNhapVao: i))")
-}
+ChonBaiTap()
 
