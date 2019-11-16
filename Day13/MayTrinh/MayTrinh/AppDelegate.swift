@@ -1,15 +1,15 @@
 //
 //  AppDelegate.swift
-//  BaiTapVeNhaUI
+//  MayTrinh
 //
-//  Created by Trung on 10/26/19.
+//  Created by Trung on 11/14/19.
 //  Copyright © 2019 Trung. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
-	class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 

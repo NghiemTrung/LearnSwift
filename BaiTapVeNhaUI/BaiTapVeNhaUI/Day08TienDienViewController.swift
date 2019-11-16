@@ -22,12 +22,30 @@ class Day08TienDienViewController: UIViewController {
     }
     
     @IBAction func onCalculation(_ sender: Any) {
-        soDien = Float(txtSoDien.text!)!
-        tienDien = soDien * (1678)
-        tienDien += (soDien-51 > 0) ? (soDien - 51)*(1734-1678) : 0
-        tienDien += ((soDien-101) > 0) ? (soDien-101)*(2014-1734) : 0
-        tienDien += ((soDien-201) > 0) ? (soDien-201)*(2536-2014) : 0
         //dùng switch
+        soDien = Float(txtSoDien.text!)!
+        switch soDien {
+        case 401...:
+            tienDien += (soDien-401)*(2927-2834)
+            fallthrough
+        case 301...400:
+            tienDien += (soDien-301)*(2834-2536)
+            fallthrough
+        case 201...300:
+            tienDien += (soDien-201)*(2536-2014)
+            fallthrough
+        case 101...200:
+            tienDien += (soDien-101)*(2014-1734)
+            fallthrough
+        case 51...100:
+            tienDien += (soDien-51)*(1734-1678)
+            fallthrough
+        default:
+            tienDien += 1678 * soDien
+        }
+        
+        labelTienDien.text = String(tienDien)
+        tienDien = 0
     }
     
 
