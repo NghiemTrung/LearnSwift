@@ -9,22 +9,16 @@
 import UIKit
 
 class TimerViewController: UIViewController {
+    
+    let currentDate = NSDate()
+    let calendar = NSCalendar.current
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        print("\(currentDate)")
+        print("\(calendar)")
+        let hour = calendar.component(.hour, from: currentDate as Date)
+        print("\(hour)")
+    }    	
 }
